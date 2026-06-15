@@ -28,7 +28,7 @@ if prompt := st.chat_input("What is on your mind?"):
 
     # --- UPDATED PART: ERROR CATCHER ---
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
         response = model.generate_content(prompt)
         
         with st.chat_message("assistant"):
